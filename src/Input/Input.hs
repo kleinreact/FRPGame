@@ -5,7 +5,7 @@ module Input.Input where
 import qualified Types.Common as T
 
 import qualified Graphics.Gloss.Interface.IO.Game as G
-import FRP.Yampa (Event(..), SF, arr, returnA, dHold, iPre)
+import AFRPV.Yampa (Event(..), SF, arr, returnA, dHold, iPre)
 
 import System.IO.Unsafe
 import System.Exit

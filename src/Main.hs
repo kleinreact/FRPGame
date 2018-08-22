@@ -13,7 +13,7 @@ import Render.ImageIO
 
 import Input.Input
 
-import FRP.Yampa (Event(..), SF, (>>>))
+import AFRPV.Yampa (Event(..), SF, (>>>), renderNetwork)
 import qualified Graphics.Gloss.Interface.IO.Game as G
 import Data.Map (union)
 import System.Random (newStdGen, StdGen)
@@ -32,20 +32,24 @@ main = do
 --   NB : read in every image we will ever need
 --   this might use up too much memor if the game uses many images since we have no way to evict an image (I think)
 playGame :: IO ()
-playGame =do
-  do
+playGame = do
     g <- newStdGen
 
     levelImgs <- makeImgMap levelImgSrcs
     playerImgs <- makeImgMap playerImgSrcs
     --coinImg <- makeImgMap coinImgSrc
     
-    let imgs = levelImgs `union` playerImgs
+    let
+      imgs = levelImgs `union` playerImgs
+      sf = mainSF g imgs
+
+    renderNetwork sf "network" 
+    
     playYampa
         (G.InWindow "Yampa Example" (800, 600) (800, 600))
         G.white
         Settings.fps
-        (mainSF g imgs)
+        sf
 
 -- | Our main signal function which is responsible for handling the whole
 -- game process, starting from parsing the input, moving to the game logic

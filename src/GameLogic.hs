@@ -16,7 +16,7 @@ import Data.Traversable
 import Codec.Picture 
 import qualified Data.HashSet as S
 
-import FRP.Yampa
+import AFRPV.Yampa
 
 import qualified Settings
 import Debug.Trace

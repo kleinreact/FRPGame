@@ -7,7 +7,7 @@ module
 where
 
 import System.Random (StdGen)
-import FRP.Yampa
+import AFRPV.Yampa
 
 import Types.Common
 import Types.GameObjs

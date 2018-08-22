@@ -2,7 +2,7 @@
 
 module Types.Common where
 
---import FRP.Yampa
+--import AFRPV.Yampa
 import qualified Graphics.Gloss.Interface.IO.Game as G
 
 import GHC.Generics

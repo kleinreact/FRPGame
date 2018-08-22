@@ -7,7 +7,7 @@ import Graphics.Gloss
 
 import Types.GameObjs
 import Types.Common
-import FRP.Yampa
+import AFRPV.Yampa
 import Render.ImageIO
 
 import Control.Lens (view)

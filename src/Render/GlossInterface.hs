@@ -2,7 +2,7 @@ module Render.GlossInterface where
 
 import Prelude hiding (id, (.))
 
-import FRP.Yampa
+import AFRPV.Yampa
 
 import Graphics.Gloss (Color, Display, Picture(Blank))
 import qualified Graphics.Gloss.Interface.IO.Game as G

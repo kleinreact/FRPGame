@@ -1,0 +1,10 @@
+resolver: lts-10.7
+packages:
+- .
+- location:
+    git: https://github.com/kleinreact/AFRPV
+    commit: dd34f2cf1d432a9ddb2e31e388a9349617c85466
+  extra-dep: true
+extra-deps: [ Yampa-0.11, gloss-juicy-0.2.2 ]
+flags: {}
+extra-package-dbs: []
